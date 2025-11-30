@@ -1,0 +1,40 @@
+Estrutura de Dados e Componentização (Component Library)
+Para evitar mudanças estruturais, precisamos definir como os dados e os componentes serão organizados.
+
+3.1. Estrutura de Conteúdo (Dados Imutáveis)
+Seu site é principalmente um repositório de conteúdo estático. Use a abordagem "Content as Data".
+
+Projetos (Projects): Crie um schema rígido (ex: um arquivo .json ou .mdx por projeto) que define exatamente quais campos cada projeto deve ter:
+
+id: string
+
+title: string
+
+tech_stack: array<string>
+
+description_short: string
+
+problem: string
+
+solution: string
+
+result_quantified: string
+
+github_link: string
+
+live_demo_link: string
+
+featured: boolean (Para destaque na página inicial).
+
+Habilidades (Skills): Uma lista simples de categorias e tecnologias ({ category: string, skills: array<string> }).
+
+3.2. Biblioteca de Componentes (Component Library)
+Definir os componentes antecipadamente evita que o estilo de um elemento mude em diferentes páginas.
+
+Componentes Atômicos: Botões (<Button />), Cartões de Tecnologia (<TechPill />), Ícones.
+
+Componentes Modulares: Cartão de Projeto (<ProjectCard project={...} />), Header de Navegação (<Navbar />), Footer.
+
+Componentes de Layout: MainLayout (para header/footer e SEO), SectionContainer (para padding e espaçamento padrão).
+
+Ação de Evitar Mudanças Rígidas: Ao usar um framework como Tailwind CSS, defina sua configuração de tema (cores, fontes, espaçamento) uma única vez no arquivo de configuração. Isso garante que todo o seu design use as mesmas variáveis.
