@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
+import { Navbar } from "@/components/sections/Navbar";
 // Configuração da fonte Inter (Texto Principal)
 const inter = Inter({
   subsets: ["latin"],
@@ -33,12 +33,17 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="bg-background text-text-primary antialiased selection:bg-primary/30 selection:text-primary-foreground">
-        {/* Aqui virá o <Navbar /> no futuro */}
-        <main className="min-h-screen flex flex-col">
+
+        {/* [ADIÇÃO] Navbar fixa no topo */}
+        <Navbar />
+
+        {/* Adicionei 'pt-16' para compensar a altura da Navbar fixa e o conteúdo não ficar escondido */}
+        <main className="min-h-screen flex flex-col pt-16">
           {children}
         </main>
-        {/* Aqui virá o <Footer /> no futuro */}
+
       </body>
     </html>
   );
 }
+
