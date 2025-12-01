@@ -9,8 +9,8 @@ export const profileData: Profile = {
   email: "bezerra35eduardo@gmail.com", // Coloque seu email real aqui
   social_links: {
     github: "https://github.com/darkruden",   // Coloque seu GitHub
-    linkedin: "www.linkedin.com/in/eduardo-bezerra-450339206", // Coloque seu LinkedIn
-    whatsapp: "55 86 98174-9379",
+    linkedin: "https://www.linkedin.com/in/eduardo-bezerra-450339206/", // Coloque seu LinkedIn
+    whatsapp: "https://wa.me/5586981749379",
   },
   
   career_milestones: [
@@ -20,12 +20,12 @@ export const profileData: Profile = {
       description: "Meu objetivo de longo prazo é fundar uma startup tecnológica. Atualmente, busco absorver as melhores práticas do mercado e dominar infraestrutura (AWS/Oracle) para fundamentar esse sonho de criar soluções revolucionárias.",
     },
     {
-      date: "2024 - Atual",
+      date: "2025 - Atual",
       title: "Foco em IA e Engenharia de Dados",
       description: "Desenvolvimento de TCC focado em RAG (Retrieval-Augmented Generation), integrando LLMs com bases de conhecimento proprietárias. Backend hospedado em Heroku e foco total em Python e Inteligência Artificial.",
     },
     {
-      date: "2020 - 2023",
+      date: "2019 - 2025",
       title: "Formação Sólida (UFPI)",
       description: "Bacharelando em Ciência da Computação. Construí uma base algorítmica forte em Java e Python, além de desenvolvimento web moderno com React e TypeScript.",
     },
