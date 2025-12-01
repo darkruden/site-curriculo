@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Terminal } from "lucide-react";
+import { Menu, X, Terminal } from "lucide-react";
+import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 import { cn } from "@/lib/utils";
 import { useChatControl } from "@/lib/chat-context"; // [IMPORTANTE: Importar o contexto]
 
@@ -30,7 +31,7 @@ export function Navbar() {
                     className="flex items-center gap-2 font-mono text-lg font-bold text-primary hover:opacity-80 transition-opacity"
                 >
                     <Terminal size={20} />
-                    <span>seu.nome</span>
+                    <span>Eduardo Bezerra</span>
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -53,20 +54,20 @@ export function Navbar() {
                     {/* Social Links */}
                     <div className="flex items-center gap-4">
                         <a
-                            href="https://github.com" // Lembre de por seus links reais aqui depois
+                            href="https://github.com/darkruden" // Lembre de por seus links reais aqui depois
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-text-secondary hover:text-white transition-colors"
                         >
-                            <Github size={20} />
+                            <GithubIcon size={20} />
                         </a>
                         <a
-                            href="https://linkedin.com"
+                            href="https://www.linkedin.com/in/eduardo-bezerra-450339206/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-text-secondary hover:text-white transition-colors"
                         >
-                            <Linkedin size={20} />
+                            <LinkedinIcon size={20} />
                         </a>
                     </div>
 

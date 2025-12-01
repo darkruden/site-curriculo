@@ -4,7 +4,7 @@ export const profileData: Profile = {
   headline: "Engenheiro de Software & AI Enthusiast | Focado em Java, Python e RAG",
   
   // O "Elevator Pitch" refinado:
-  bio_short: "Estudante de Ciência da Computação na UFPI (25 anos) com foco em desenvolvimento Full Stack e Inteligência Artificial. Tenho experiência prática na construção de Chatbots e sistemas RAG (Retrieval-Augmented Generation). Movido por uma ambição extrema e pela promessa de excelência profissional, busco minha primeira oportunidade formal para aplicar minha proatividade em desafios de Engenharia de Software ou Data Science.",
+  bio_short: "Estudante de Ciência da Computação na UFPI (25 anos de idade) com foco em desenvolvimento Full Stack e Inteligência Artificial. Tenho experiência prática na construção de Chatbots e sistemas RAG (Retrieval-Augmented Generation). Movido por uma ambição extrema e pela promessa de excelência profissional, busco minha primeira oportunidade formal para aplicar minha proatividade em desafios de Engenharia de Software ou Data Science.",
   
   email: "bezerra35eduardo@gmail.com", // Coloque seu email real aqui
   social_links: {

@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Download } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react"; // [ALTERADO] Removido Github e Linkedin
+import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons"; // [NOVO]
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -75,22 +76,22 @@ export function Hero() {
 
                     <div className="flex gap-4">
                         <a
-                            href="https://github.com/seu-usuario"
+                            href="https://github.com/darkruden" // Lembre-se de ajustar este link se ainda não fez
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-4 rounded-lg bg-surface border border-border text-text-secondary hover:text-white hover:border-primary/50 transition-all hover:scale-105"
                             aria-label="GitHub Profile"
                         >
-                            <Github className="w-6 h-6" />
+                            <GithubIcon size={24} className="w-6 h-6" /> {/* [ATUALIZADO] */}
                         </a>
                         <a
-                            href="https://linkedin.com/in/seu-usuario"
+                            href="https://www.linkedin.com/in/eduardo-bezerra-450339206/" // Lembre-se de ajustar este link se ainda não fez
                             target="_blank"
                             rel="noopener noreferrer"
                             className="p-4 rounded-lg bg-surface border border-border text-text-secondary hover:text-white hover:border-primary/50 transition-all hover:scale-105"
                             aria-label="LinkedIn Profile"
                         >
-                            <Linkedin className="w-6 h-6" />
+                            <LinkedinIcon size={24} className="w-6 h-6" /> {/* [ATUALIZADO] */}
                         </a>
                     </div>
                 </motion.div>
