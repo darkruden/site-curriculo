@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/sections/Navbar";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 // Configuração da fonte Inter (Texto Principal)
 const inter = Inter({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
         <main className="min-h-screen flex flex-col pt-16">
           {children}
         </main>
+        <ChatWidget />
 
       </body>
     </html>
