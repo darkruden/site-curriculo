@@ -10,6 +10,7 @@ export const profileData: Profile = {
   social_links: {
     github: "https://github.com/darkruden",   // Coloque seu GitHub
     linkedin: "www.linkedin.com/in/eduardo-bezerra-450339206", // Coloque seu LinkedIn
+    whatsapp: "55 86 98174-9379",
   },
   
   career_milestones: [

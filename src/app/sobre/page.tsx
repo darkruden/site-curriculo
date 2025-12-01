@@ -2,7 +2,8 @@ import { Metadata } from "next";
 import { profileData } from "@/content/profile";
 import { Timeline } from "@/components/sections/Timeline";
 import { ChatCta } from "@/components/sections/ChatCta"; // [NOVO IMPORT]
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Phone } from "lucide-react";
+
 
 // Agora o Metadata funciona porque este é um Server Component
 export const metadata: Metadata = {
@@ -48,6 +49,19 @@ export default function AboutPage() {
                             <a href={`mailto:${profileData.email}`} className="p-2 rounded-lg bg-surface hover:bg-surface/80 hover:text-primary transition-colors border border-border">
                                 <Mail size={20} />
                             </a>
+
+                            {/* [ADIÇÃO] Botão do WhatsApp */}
+                            {profileData.social_links.whatsapp && (
+                                <a
+                                    href={profileData.social_links.whatsapp}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-lg bg-surface hover:bg-surface/80 hover:text-green-500 transition-colors border border-border"
+                                    title="Chamar no WhatsApp"
+                                >
+                                    <Phone size={20} />
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>

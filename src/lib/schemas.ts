@@ -46,6 +46,7 @@ export const ProfileSchema = z.object({
     github: z.string().url(),
     linkedin: z.string().url(),
     twitter: z.string().url().optional(),
+    whatsapp: z.string().url().optional(),
   }),
   career_milestones: z.array(z.object({
     date: z.string(),
