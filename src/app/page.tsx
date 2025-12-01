@@ -1,13 +1,13 @@
 import { Hero } from "@/components/sections/Hero";
+import { Skills } from "@/components/sections/Skills"; // [ADIÇÃO]
+import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-20 pb-20">
-      {/* Seção 1: A Primeira Impressão */}
+    <div className="flex flex-col">
       <Hero />
-
-      {/* Futuro: <SkillsMatrix /> */}
-      {/* Futuro: <FeaturedProjects /> */}
+      <FeaturedProjects /> {/* [ADIÇÃO] - Colocamos Projetos ANTES de Skills para prioridade */}
+      <Skills />
     </div>
   );
 }
