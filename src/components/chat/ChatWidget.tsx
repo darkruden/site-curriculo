@@ -1,21 +1,25 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+// [CORREÇÃO] Importamos o hook do pacote novo E o tipo Message do pacote core
 import { useChat } from "@ai-sdk/react";
+import { type Message } from "ai";
+
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, Send, Bot, User } from "lucide-react";
-import { Button } from "@/components/ui/Button"; // Se não tiver, usaremos HTML padrão
+// Removemos a importação do Button que estava dando erro de caminho e usaremos HTML padrão por enquanto
 import { cn } from "@/lib/utils";
 
 export function ChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
+
+    // O hook useChat gerencia todo o estado do chat
     const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
-        api: "/api/chat", // Aponta para a rota que criamos
+        api: "/api/chat",
     });
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    // Auto-scroll para a última mensagem
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages]);
@@ -23,7 +27,6 @@ export function ChatWidget() {
     return (
         <div className="fixed bottom-4 right-4 z-50 flex flex-col items-end">
 
-            {/* Janela do Chat */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -56,7 +59,8 @@ export function ChatWidget() {
                                 </div>
                             )}
 
-                            {messages.map((m) => (
+                            {/* [CORREÇÃO] Tipamos 'm' como 'Message' para o TypeScript reconhecer 'content' e 'role' */}
+                            {messages.map((m: Message) => (
                                 <div
                                     key={m.id}
                                     className={cn(
@@ -96,7 +100,7 @@ export function ChatWidget() {
                                     value={input}
                                     onChange={handleInputChange}
                                     placeholder="Pergunte algo..."
-                                    className="flex-1 bg-background border border-border rounded-md px-3 py-2 text-sm focus:outline-none focus:border-primary/50 text-text-primary"
+                                    className="flex-1 bg-background border border-border rounded-md px-3 py-2 text-sm focus:outline-none focus:border-primary/50 text-text-primary placeholder:text-text-secondary/50"
                                 />
                                 <button
                                     type="submit"
@@ -111,7 +115,6 @@ export function ChatWidget() {
                 )}
             </AnimatePresence>
 
-            {/* Botão Flutuante (Toggle) */}
             <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
