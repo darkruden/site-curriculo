@@ -2,46 +2,42 @@ import { SkillCategory } from "@/lib/schemas";
 
 export const skillsData: SkillCategory[] = [
   {
-    category: "Linguagens & Core",
+    category: "IA & Data Science",
     items: [
+      "Python",
+      "RAG (Retrieval-Augmented Generation)",
+      "LLM Integration",
+      "Chatbots",
+      "Pandas/NumPy (Estudos)"
+    ],
+  },
+  {
+    category: "Backend & Core",
+    items: [
+      "Java (POO)",
+      "Python (FastAPI/Flask)",
+      "Node.js",
+      "API RESTful",
+      "Heroku"
+    ],
+  },
+  {
+    category: "Frontend Web",
+    items: [
+      "React.js",
       "TypeScript",
       "JavaScript (ES6+)",
-      "Python",
-      "HTML5/CSS3",
-      "SQL"
+      "HTML5 & CSS3",
+      "Tailwind CSS"
     ],
   },
   {
-    category: "Frontend & Frameworks",
+    category: "Metas de Aprendizado",
     items: [
-      "Next.js 14/15",
-      "React",
-      "Tailwind CSS",
-      "Framer Motion",
-      "Zod",
-      "React Query"
-    ],
-  },
-  {
-    category: "Backend & Cloud",
-    items: [
-      "Node.js",
-      "Serverless (Edge Functions)",
-      "PostgreSQL",
-      "Prisma ORM",
-      "Docker",
-      "Vercel"
-    ],
-  },
-  {
-    category: "Ferramentas & DevOps",
-    items: [
-      "Git & GitHub",
-      "CI/CD (Actions)",
-      "Jest/Vitest",
-      "Playwright",
-      "Figma",
-      "VS Code"
+      "AWS Cloud",
+      "Oracle Cloud",
+      "Docker & Kubernetes",
+      "Arquitetura de Microsserviços"
     ],
   },
 ];
