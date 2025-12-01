@@ -1,0 +1,19 @@
+tailwind.config.ts(3,16): error TS1005: ';' expected.
+tailwind.config.ts(4,15): error TS1005: ';' expected.
+tailwind.config.ts(7,16): error TS1005: ';' expected.
+tailwind.config.ts(8,18): error TS1005: ';' expected.
+tailwind.config.ts(11,23): error TS1005: ';' expected.
+tailwind.config.ts(12,25): error TS1005: ';' expected.
+tailwind.config.ts(13,7): error TS1109: Expression expected.
+tailwind.config.ts(13,8): error TS1128: Declaration or statement expected.
+tailwind.config.ts(17,13): error TS1005: ';' expected.
+tailwind.config.ts(18,7): error TS1109: Expression expected.
+tailwind.config.ts(18,8): error TS1128: Declaration or statement expected.
+tailwind.config.ts(21,21): error TS1005: ';' expected.
+tailwind.config.ts(22,7): error TS1109: Expression expected.
+tailwind.config.ts(22,8): error TS1128: Declaration or statement expected.
+tailwind.config.ts(23,5): error TS1128: Declaration or statement expected.
+tailwind.config.ts(23,6): error TS1128: Declaration or statement expected.
+tailwind.config.ts(24,3): error TS1128: Declaration or statement expected.
+tailwind.config.ts(24,4): error TS1128: Declaration or statement expected.
+tailwind.config.ts(26,1): error TS1109: Expression expected.

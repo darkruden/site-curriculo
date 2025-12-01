@@ -2,23 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  /* Define o tema escuro como padrão global */
-  body {
-    @apply bg-background text-text-primary antialiased;
-  }
-
-  /* Estilização básica para scrollbar ficar bonita no dark mode */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    @apply bg-background;
-  }
-  ::-webkit-scrollbar-thumb {
-    @apply bg-border rounded-full;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-700;
-  }
-}
+/* As cores de fundo e texto já estão definidas no layout.tsx.
+  Não precisamos repetir aqui com @apply para evitar erros de build.
+*/
